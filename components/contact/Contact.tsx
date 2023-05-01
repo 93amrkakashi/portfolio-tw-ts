@@ -3,39 +3,42 @@ import axios from "axios";
 import { FiSend } from "react-icons/fi";
 import Title from "../home/Title";
 
-const Contact = () => {
-  const [clientName, setClientName] = useState("");
-  const [email, setEmail] = useState("");
-  const [messages, setMessages] = useState("");
+const Contact: React.FC = () => {
+  const [clientName, setClientName] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [messages, setMessages] = useState<string>("");
 
   // ================= Error Messages Start here =================
-  const [errClientName, setErrClientName] = useState(false);
-  const [errEmail, setErrEmail] = useState(false);
-  const [errMessages, setErrMessage] = useState(false);
+  const [errClientName, setErrClientName] = useState<boolean>(false);
+  const [errEmail, setErrEmail] = useState<boolean>(false);
+  const [errMessages, setErrMessage] = useState<boolean>(false);
   // ================= Error Messages End here ===================
-  const [seuccessMsg, setSuccessMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState<string>("");
+
   // ================= Email Validation Start here ===============
-  const EmailValidation = (email) => {
+  const EmailValidation = (email: string): boolean => {
     return String(email)
       .toLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/)
+      ? true
+      : false;
   };
   // ================= Email Validation End here =================
 
-  const handleName = (e) => {
+  const handleName = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setClientName(e.target.value);
     setErrClientName(false);
   };
-  const handleEmail = (e) => {
+  const handleEmail = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setEmail(e.target.value);
     setErrEmail(false);
   };
-  const handleMessages = (e) => {
+  const handleMessages = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setMessages(e.target.value);
     setErrMessage(false);
   };
 
-  const handleSend = (e) => {
+  const handleSend = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (!clientName) {
       setErrClientName(true);
@@ -57,7 +60,7 @@ const Contact = () => {
         message: messages,
       });
       setSuccessMsg(
-        `Hello dear ${clientName}, Your messages has been sent successfully. Thank you for your time!`
+        `Hello dear ${clientName}, Your message has been sent successfully. Thank you for your time!`
       );
       setClientName("");
       setEmail("");
@@ -99,12 +102,13 @@ const Contact = () => {
       </div>
       <div className="w-full mt-10">
         <Title title="Send" subTitle="Messages" />
-        {seuccessMsg ? (
+        {successMsg ? (
           <p className="text-center text-base font-titleFont p-20 text-designColor">
-            {seuccessMsg}
+            {successMsg}
           </p>
         ) : (
           <form
+          onSubmit={handleSend}
             id="form"
             action="https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f"
             method="POST"
@@ -144,10 +148,10 @@ const Contact = () => {
                   : "border-zinc-600 focus-visible:border-designColor"
               } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300 resize-none`}
               placeholder="Your Message"
-              rows="4"
+              rows={4}
             ></textarea>
             <button
-              onClick={handleSend}
+              
               className="text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColor duration-200"
             >
               Send Message{" "}

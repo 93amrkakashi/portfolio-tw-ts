@@ -6,11 +6,11 @@ import { MdWork, MdOutlineClose } from "react-icons/md";
 import { SiGooglechat } from "react-icons/si";
 import { BsTelephonePlusFill } from "react-icons/bs";
 import About from "./about/About";
-import Contact from "./contact/Contact";
 import Sidenav from "./home/sidenav/Sidenav";
 import Left from "./home/Left";
 import Resume from "./resume/Resume";
 import Projects from "./projects/Projects";
+import Contact from "./contact/Contact";
 
 const HomePage: React.FC = () => {
   const [about, setAbout] = useState<boolean>(true);
