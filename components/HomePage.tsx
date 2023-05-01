@@ -5,10 +5,7 @@ import { IoIosPaper } from "react-icons/io";
 import { MdWork, MdOutlineClose } from "react-icons/md";
 import { SiGooglechat } from "react-icons/si";
 import { BsTelephonePlusFill } from "react-icons/bs";
-// import Left from "./home/Left";
 import About from "./about/About";
-// import Resume from "./resume/Resume";
-// import Projects from "./projects/Projects";
 import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import Sidenav from "./home/sidenav/Sidenav";
@@ -20,7 +17,7 @@ const HomePage: React.FC = () => {
   const [about, setAbout] = useState<boolean>(true);
   const [resume, setResume] = useState<boolean>(false);
   const [projects, setProjects] = useState<boolean>(false);
-  const [blog, setBlog] = useState<boolean>(false);
+  // const [blog, setBlog] = useState<boolean>(false);
   const [contact, setContact] = useState<boolean>(false);
   const [sidenav, setSidenav] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -84,7 +81,7 @@ const HomePage: React.FC = () => {
               setAbout(true);
               setResume(false);
               setProjects(false);
-              setBlog(false);
+              // setBlog(false);
               setContact(false);
             }}
             className={`${
@@ -105,7 +102,7 @@ const HomePage: React.FC = () => {
               setAbout(false);
               setResume(true);
               setProjects(false);
-              setBlog(false);
+              // setBlog(false);
               setContact(false);
             }}
             className={`${
@@ -125,7 +122,7 @@ const HomePage: React.FC = () => {
               setAbout(false);
               setResume(false);
               setProjects(true);
-              setBlog(false);
+              // setBlog(false);
               setContact(false);
             }}
             className={`${
@@ -139,33 +136,13 @@ const HomePage: React.FC = () => {
               Projects
             </span>
           </span>
-          {/* Blog Icon */}
-          <span
-            onClick={() => {
-              setAbout(false);
-              setResume(false);
-              setProjects(false);
-              setBlog(true);
-              setContact(false);
-            }}
-            className={`${
-              blog
-                ? "text-designColor"
-                : "w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group"
-            } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
-          >
-            <SiGooglechat />
-            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-              Blog
-            </span>
-          </span>
           {/* Contact Icon */}
           <span
             onClick={() => {
               setAbout(false);
               setResume(false);
               setProjects(false);
-              setBlog(false);
+              // setBlog(false);
               setContact(true);
             }}
             className={`${
@@ -232,7 +209,7 @@ const HomePage: React.FC = () => {
                 <Projects />
               </motion.div>
             )}
-            {blog && (
+            {/* {blog && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -240,7 +217,7 @@ const HomePage: React.FC = () => {
               >
                 <Blog />
               </motion.div>
-            )}
+            )} */}
             {contact && (
               <motion.div
                 initial={{ opacity: 0 }}

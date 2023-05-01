@@ -10,7 +10,6 @@ interface ProjectsCardProps {
 }
 
 const ProjectsCard: React.FC<ProjectsCardProps> = ({ image, title, category, link, code }) => {
-  console.log(image);
   return (
     <div className="w-full py-8 flex flex-col justify-center items-center border-b-[1px] border-b-zinc-800">
       <a href={link} target="_blank" rel="noopener noreferrer">
@@ -26,7 +25,7 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({ image, title, category, lin
       <h3 className="font-titleFont text-lg font-semibold text-[#ccc]">
         {title}
       </h3>
-      <p className="text-base text-gray-400 -mt-1">{category}</p>
+      <p className="text-center text-base text-gray-400 -mt-1">{category}</p>
     </div>
   );
 };
