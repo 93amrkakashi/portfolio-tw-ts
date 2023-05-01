@@ -6,7 +6,6 @@ import { MdWork, MdOutlineClose } from "react-icons/md";
 import { SiGooglechat } from "react-icons/si";
 import { BsTelephonePlusFill } from "react-icons/bs";
 import About from "./about/About";
-import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import Sidenav from "./home/sidenav/Sidenav";
 import Left from "./home/Left";
@@ -176,7 +175,7 @@ const HomePage: React.FC = () => {
             <About />
             <Resume />
             <Projects />
-            <Blog />
+            {/* <Blog /> */}
             <Contact />
           </div>
           {/* ======================== Smaller device content End ========================== */}
