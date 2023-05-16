@@ -7,12 +7,13 @@ import { SiGooglechat } from "react-icons/si";
 import { BsTelephonePlusFill } from "react-icons/bs";
 // import Left from "./home/Left";
 import About from "./about/About";
-import Resume from "./resume/Resume";
+// import Resume from "./resume/Resume";
 import Projects from "./projects/Projects";
 import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import Sidenav from "./home/sidenav/Sidenav";
 import Left from "./home/Left";
+import Resume from "./resume/Resume";
 
 const HomePage: React.FC = () => {
   const [about, setAbout] = useState<boolean>(true);
