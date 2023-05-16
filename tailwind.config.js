@@ -22,9 +22,9 @@ module.exports = {
         titleFont: ["Montserrat", "sans-serif"],
       },
       colors: {
-        bodyColor: "#191919",
+        bodyColor: "#2d3748",
         textColor: "rgba(255, 255, 255, 0.85)",
-        designColor: "#edff20",
+        designColor: "#4299e1",
         titleRoundBg:
           "linear-gradient(135deg,rgba(120,204,109,.15) 0%,rgba(120,204,109,1%) 100%)",
       },
