@@ -5,13 +5,14 @@ import { IoIosPaper } from "react-icons/io";
 import { MdWork, MdOutlineClose } from "react-icons/md";
 import { SiGooglechat } from "react-icons/si";
 import { BsTelephonePlusFill } from "react-icons/bs";
-import Left from "./home/Left";
+// import Left from "./home/Left";
 import About from "./about/About";
 import Resume from "./resume/Resume";
 import Projects from "./projects/Projects";
 import Blog from "./blog/Blog";
 import Contact from "./contact/Contact";
 import Sidenav from "./home/sidenav/Sidenav";
+import Left from "./home/Left";
 
 const HomePage: React.FC = () => {
   const [about, setAbout] = useState<boolean>(true);
@@ -92,7 +93,7 @@ const HomePage: React.FC = () => {
             // className="w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group"
           >
             <FaUser />
-            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               About
             </span>
           </span>
@@ -112,7 +113,7 @@ const HomePage: React.FC = () => {
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
           >
             <IoIosPaper />
-            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Resume
             </span>
           </span>
@@ -132,7 +133,7 @@ const HomePage: React.FC = () => {
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
           >
             <MdWork />
-            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Projects
             </span>
           </span>
@@ -152,7 +153,7 @@ const HomePage: React.FC = () => {
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
           >
             <SiGooglechat />
-            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Blog
             </span>
           </span>
@@ -162,8 +163,8 @@ const HomePage: React.FC = () => {
               setAbout(false);
               setResume(false);
               setProjects(false);
-              setBlog(true);
-              setContact(false);
+              setBlog(false);
+              setContact(true);
             }}
             className={`${
               contact
@@ -172,13 +173,13 @@ const HomePage: React.FC = () => {
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
           >
             <FaEnvelope />
-            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Contact
             </span>
           </span>
           <span className="w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group">
             <BsTelephonePlusFill />
-            <span className="text-black font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+            <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Call
             </span>
           </span>
