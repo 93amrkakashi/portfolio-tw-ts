@@ -2,8 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { FaUser, FaEnvelope } from "react-icons/fa";
 import { IoIosPaper } from "react-icons/io";
-import { MdWork, MdOutlineClose } from "react-icons/md";
-import { SiGooglechat } from "react-icons/si";
+import { MdWork } from "react-icons/md";
 import { BsTelephonePlusFill } from "react-icons/bs";
 import About from "./about/About";
 // import Sidenav from "./home/sidenav/Sidenav";
@@ -16,7 +15,6 @@ const HomePage: React.FC = () => {
   const [about, setAbout] = useState<boolean>(true);
   const [resume, setResume] = useState<boolean>(false);
   const [projects, setProjects] = useState<boolean>(false);
-  // const [blog, setBlog] = useState<boolean>(false);
   const [contact, setContact] = useState<boolean>(false);
   const [sidenav, setSidenav] = useState<boolean>(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -36,7 +34,6 @@ const HomePage: React.FC = () => {
     <div className="w-full lgl:w-[85%] px-8 h-full lgl:h-[85%] bg-transparent text-white z-50 flex gap-x-4 items-center justify-between p-4 lgl:p-0">
       {/* ================= Left Icons End here ======================== */}
       <div className="w-12 h-full bg-transparent hidden lgl:flex flex-col items-center justify-center gap-4">
-
         <div className="w-full h-96 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6">
           {/* About Icon */}
           <span
@@ -44,7 +41,6 @@ const HomePage: React.FC = () => {
               setAbout(true);
               setResume(false);
               setProjects(false);
-              // setBlog(false);
               setContact(false);
             }}
             className={`${
@@ -52,7 +48,6 @@ const HomePage: React.FC = () => {
                 ? "text-designColor"
                 : "w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group"
             } w-full h-6 text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
-            // className="w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group"
           >
             <FaUser />
             <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
@@ -65,7 +60,6 @@ const HomePage: React.FC = () => {
               setAbout(false);
               setResume(true);
               setProjects(false);
-              // setBlog(false);
               setContact(false);
             }}
             className={`${
@@ -85,7 +79,6 @@ const HomePage: React.FC = () => {
               setAbout(false);
               setResume(false);
               setProjects(true);
-              // setBlog(false);
               setContact(false);
             }}
             className={`${
@@ -105,7 +98,6 @@ const HomePage: React.FC = () => {
               setAbout(false);
               setResume(false);
               setProjects(false);
-              // setBlog(false);
               setContact(true);
             }}
             className={`${
@@ -120,8 +112,8 @@ const HomePage: React.FC = () => {
             </span>
           </span>
           <span className="w-full h-6 text-textColor text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group">
-          <a href="tel:01029404662" target="_blank" rel="noopener noreferrer">
-            <BsTelephonePlusFill />
+            <a href="tel:01029404662" target="_blank" rel="noopener noreferrer">
+              <BsTelephonePlusFill />
             </a>
             <span className="text-white font-medium text-xs uppercase bg-designColor px-4 py-[1px] rounded-xl absolute left-0 translate-x-8 group-hover:translate-x-12 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
               Call
@@ -138,7 +130,6 @@ const HomePage: React.FC = () => {
             <About />
             <Resume />
             <Projects />
-            {/* <Blog /> */}
             <Contact />
           </div>
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
@@ -170,15 +161,6 @@ const HomePage: React.FC = () => {
                 <Projects />
               </motion.div>
             )}
-            {/* {blog && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Blog />
-              </motion.div>
-            )} */}
             {contact && (
               <motion.div
                 initial={{ opacity: 0 }}
