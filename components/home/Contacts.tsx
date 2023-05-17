@@ -51,7 +51,7 @@ const Contacts = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span className="hover:text-designColor duration-300 cursor-pointer text-3xl">
+        <span className="hover:text-designColor duration-300 cursor-pointer text-3xl relative">
           <FaWhatsappSquare />
         </span>
       </a>
