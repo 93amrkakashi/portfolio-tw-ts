@@ -1,6 +1,11 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
-const ResumeTitle = ({ icon, title }) => {
+interface ResumeTitleProps {
+  icon: ReactElement;
+  title: string;
+}
+
+const ResumeTitle = ({ icon, title }: ResumeTitleProps): ReactElement => {
   return (
     <h1 className="text-lg text-gray-300 uppercase font-medium flex items-center gap-2 py-3 border-b-[1px] border-b-zinc-800">
       <span className="text-designColor text-2xl">{icon}</span>

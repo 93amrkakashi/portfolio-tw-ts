@@ -37,7 +37,8 @@ export const data = [
   {
     title: "Portfolio TS Chakra",
     image: "/pics/portfolio-ts.png",
-    category: "Html - css - type script - java script - react.js - firebase - chakra ui",
+    category:
+      "Html - css - type script - java script - react.js - firebase - chakra ui",
     link: "https://next-type-je76.vercel.app/",
     code: "https://github.com/93amrkakashi/portfolio-nextjs-ts",
   },

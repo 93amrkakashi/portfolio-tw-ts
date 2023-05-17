@@ -1,9 +1,6 @@
 import React from "react";
-import { SiArtstation } from "react-icons/si";
 import { FaFlag } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";
-import { IoIosPaper } from "react-icons/io";
-import { GiCheckMark } from "react-icons/gi";
 import ResumeTitle from "./ResumeTitle";
 
 const Skills = () => {
@@ -11,7 +8,7 @@ const Skills = () => {
     <div className="w-full grid grid-cols-9 gap-10 lgl:gap-0 px-6">
       {/* =============== Design and Languages Start here =================== */}
       <div className="col-span-9 md:col-span-4">
-      <ResumeTitle title="Coding" icon={<BiCodeAlt />} />
+        <ResumeTitle title="Coding" icon={<BiCodeAlt />} />
         {/* web Design */}
         <div className="py-4">
           <div className="py-3 border-b-[1px] border-zinc-800">
@@ -63,13 +60,10 @@ const Skills = () => {
               <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
           </div>
-          
         </div>
       </div>
       {/* =============== Design and Languages End here ===================== */}
-      
-      
-      {/* =============== Design and Languages End here ===================== */}
+
     </div>
   );
 };
