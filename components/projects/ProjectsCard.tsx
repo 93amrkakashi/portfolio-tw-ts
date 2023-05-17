@@ -11,9 +11,9 @@ interface ProjectsCardProps {
 
 const ProjectsCard: React.FC<ProjectsCardProps> = ({ image, title, category, link, code }) => {
   return (
-    <div className="w-full py-8 flex flex-col justify-center items-center border-b-[1px] border-b-zinc-800">
+    <div className="w-full py-8 flex flex-col justify-center items-center border-b-[1px] border-b-zinc-800 " >
       <a href={link} target="_blank" rel="noopener noreferrer">
-        <div className="w-full h-full mb-3 overflow-hidden relative cursor-pointer group">
+        <div className="w-full h-full mb-3 overflow-hidden relative rounded-xl cursor-pointer group">
           <img
             src={image}
             alt="ImageOne"

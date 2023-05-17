@@ -6,7 +6,7 @@ import { MdWork, MdOutlineClose } from "react-icons/md";
 import { SiGooglechat } from "react-icons/si";
 import { BsTelephonePlusFill } from "react-icons/bs";
 import About from "./about/About";
-import Sidenav from "./home/sidenav/Sidenav";
+// import Sidenav from "./home/sidenav/Sidenav";
 import Left from "./home/Left";
 import Resume from "./resume/Resume";
 import Projects from "./projects/Projects";
@@ -33,47 +33,11 @@ const HomePage: React.FC = () => {
     });
   }, []);
   return (
-    <div className="w-full lgl:w-[85%] h-full lgl:h-[85%] bg-transparent text-white z-50 flex items-start justify-between p-4 lgl:p-0">
+    <div className="w-full lgl:w-[85%] px-8 h-full lgl:h-[85%] bg-transparent text-white z-50 flex gap-x-4 items-center justify-between p-4 lgl:p-0">
       {/* ================= Left Icons End here ======================== */}
-      <div className="w-16 h-96 bg-transparent hidden lgl:flex flex-col gap-4">
-        {/* ======= Home Icon start */}
-        <div
-          onClick={() => setSidenav(true)}
-          className="w-full h-20 bg-bodyColor rounded-3xl flex justify-center items-center cursor-pointer group"
-        >
-          <div className="flex flex-col gap-1.5 overflow-hidden">
-            <span className="w-8 h-[2px] bg-textColor inline-block -translate-x-2 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColor"></span>
-            <span className="w-8 h-[2px] bg-textColor inline-block group-hover:bg-designColor duration-300"></span>
-            <span className="w-8 h-[2px] bg-textColor inline-block -translate-x-3.5 group-hover:translate-x-0 transition-transform duration-300 group-hover:bg-designColor"></span>
-          </div>
-        </div>
-        {/* ======= Home Icon End */}
+      <div className="w-12 h-full bg-transparent hidden lgl:flex flex-col items-center justify-center gap-4">
 
-        {/* ============= Sidenav Start here ============= */}
-        {sidenav && (
-          <div className="w-full h-screen fixed top-0 left-0 bg-black bg-opacity-50 z-50">
-            <div className="w-96 h-full relative">
-              <motion.div
-                ref={ref}
-                initial={{ x: -500, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="w-full h-full bg-bodyColor overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]"
-              >
-                <Sidenav />
-                <span
-                  onClick={() => setSidenav(false)}
-                  className="absolute top-0 -right-16 w-12 h-12 bg-bodyColor text-2xl text-textColor hover:text-designColor duration-300 cursor-pointer flex items-center justify-center z-50"
-                >
-                  <MdOutlineClose />
-                </span>
-              </motion.div>
-            </div>
-          </div>
-        )}
-        {/* ============= Sidenav End here =============== */}
-        {/* ======= Other Icons Start */}
-        <div className="w-full h-80 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6">
+        <div className="w-full h-96 bg-bodyColor rounded-3xl flex flex-col items-center justify-between py-6">
           {/* About Icon */}
           <span
             onClick={() => {
@@ -167,20 +131,16 @@ const HomePage: React.FC = () => {
         {/* ======= Other Icons End */}
       </div>
       {/* ================= Left Icons Start here ====================== */}
-      <div className="w-full lgl:w-[94%] h-full flex flex-col gap-6 lgl:gap-0 lgl:flex-row items-center">
-        {/* ======================== Home Left Start here ============================ */}
+      <div className="w-full lgl:w-[94%] h-full flex flex-col gap-6 lgl:gap-2 lgl:flex-row items-center">
         <Left />
-        {/* ======================== Home Left End here ============================== */}
-        <div className="w-full lgl:w-8/12 h-[95%] bg-bodyColor rounded-2xl flex justify-center items-center">
-          {/* ======================== Smaller device content Start ======================== */}
-          <div className="w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6">
+        <div className="w-full lgl:w-8/12 h-full bg-bodyColor rounded-2xl flex justify-center items-center">
+          <div className="w-full h-full h-[95%] lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6">
             <About />
             <Resume />
             <Projects />
             {/* <Blog /> */}
             <Contact />
           </div>
-          {/* ======================== Smaller device content End ========================== */}
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
             {about && (
               <motion.div
