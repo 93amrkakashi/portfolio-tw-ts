@@ -1,21 +1,17 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { SiYoutubemusic } from "react-icons/si";
-import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
-import { FaGooglePlusSquare, FaWhatsappSquare } from "react-icons/fa";
-import { BsCloudLightningFill, BsFacebook } from "react-icons/bs";
-// href="https://github.com/93amrkakashi"
-// href="mailto:93amr.kakashi@gmail.com"
-// href="https://www.linkedin.com/in/amr-ali-mohamed-88192b241/"
-// href="https://www.facebook.com/93amr.kakashi/"
-// href="https://wa.me/0201029404662"
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillFacebook } from "react-icons/ai";
+import {
+  FaGooglePlusSquare,
+  FaWhatsappSquare,
+  FaGithubSquare,
+} from "react-icons/fa";
 
 const Contacts = () => {
   return (
     <div className="flex justify-center gap-2 mt-2">
       <a target="_blank" href="https://github.com/93amrkakashi">
         <span className="hover:text-designColor duration-300 cursor-pointer text-3xl">
-          <FaGithub />
+          <FaGithubSquare />
         </span>
       </a>
       <a
@@ -34,7 +30,7 @@ const Contacts = () => {
         rel="noopener noreferrer"
       >
         <span className="hover:text-designColor duration-300 cursor-pointer text-3xl">
-          <BsFacebook />
+          <AiFillFacebook />
         </span>
       </a>
       <a

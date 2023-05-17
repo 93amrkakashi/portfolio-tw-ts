@@ -77,24 +77,23 @@ const Contact: React.FC = () => {
         <div className="w-full lgl:w-2/2">
           <p className="flex gap-6  w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
             <span className="bg-designColor  text-lg  font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-            <ImLocation2 />
+              <ImLocation2 />
             </span>
             Maghagha - Minia - Egypt
           </p>
           <p className="flex gap-6  w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
             <span className="bg-designColor   text-lg  font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-            <BsFillTelephoneFill />
+              <BsFillTelephoneFill />
             </span>
             +201029404662
           </p>
           <p className="flex  lgl:gap-6 w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
             <span className="bg-designColor  text-lg  font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-            <MdAlternateEmail />
+              <MdAlternateEmail />
             </span>
             93amr.kakashi@gmail.com
           </p>
         </div>
-
       </div>
       <div className="w-full mt-10">
         <Title title="Send" subTitle="Messages" />
@@ -104,7 +103,7 @@ const Contact: React.FC = () => {
           </p>
         ) : (
           <form
-          onSubmit={handleSend}
+            onSubmit={handleSend}
             id="form"
             action="https://getform.io/f/5fc7e313-e290-4b98-a32c-4d48fe987a7b"
             method="POST"
@@ -146,10 +145,7 @@ const Contact: React.FC = () => {
               placeholder="Your Message"
               rows={4}
             ></textarea>
-            <button
-              
-              className="text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColor duration-200"
-            >
+            <button className="text-base w-44 flex items-center gap-1 text-gray-200 hover:text-designColor duration-200">
               Send Message{" "}
               <span className="mt-1 text-designColor">
                 <FiSend />

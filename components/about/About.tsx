@@ -5,6 +5,7 @@ import Tools from "./Tools";
 import MySkills from "./MySkills";
 
 const About = () => {
+  
   return (
     <section id="about" className="w-full">
       <Title title="About" subTitle="Me" />

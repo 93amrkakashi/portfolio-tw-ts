@@ -1,12 +1,7 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { BsCloudLightningFill, BsFacebook } from "react-icons/bs";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { SiYoutubemusic } from "react-icons/si";
-import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
-// import CV from "../../assets/Noor_Mohammad_resume.pdf";
-import { bannerImg } from "../../assets/index";
+import { BsCloudLightningFill } from "react-icons/bs";
+import { FiSend } from "react-icons/fi";
 import Contacts from "./Contacts";
 
 const Left: React.FC = () => {
@@ -23,7 +18,6 @@ const Left: React.FC = () => {
         <img
           className="w-full h-full object-cover rounded-2xl"
           src={"/pics/pic.jpg"}
-          // loading="priority"
           alt="bannerImage"
         />
       </div>
@@ -54,9 +48,10 @@ const Left: React.FC = () => {
               href="https://wa.me/0201029404662"
               target="_blank"
               rel="noopener noreferrer"
-            >Contact me
+            >
+              Contact me
             </a>
-               <FiSend />
+            <FiSend />
           </button>
         </div>
       </div>
