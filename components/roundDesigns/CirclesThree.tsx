@@ -1,6 +1,6 @@
 import React from "react";
 
-const RoundFour = () => {
+const CirclesThree: React.FC = () => {
   return (
     <div className="w-[800px] h-[800px] rounded-full absolute top-0 left-1/3">
       <div className="w-full h-full relative animate-reverse-spin">
@@ -13,4 +13,4 @@ const RoundFour = () => {
   );
 };
 
-export default RoundFour;
+export default CirclesThree;
