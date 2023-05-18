@@ -21,7 +21,7 @@ const Left: React.FC = () => {
     <div className="w-full h-3/5">
       <img
         className="w-full h-full object-cover rounded-2xl"
-        // src={bannerImg}
+        src={'/pics/pic.jpg'}
         // loading="priority"
         alt="bannerImage"
       />
