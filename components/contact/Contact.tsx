@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FiSend } from "react-icons/fi";
 import Title from "../home/Title";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdAlternateEmail } from "react-icons/md";
+import { ImLocation2 } from "react-icons/im";
 
 const Contact: React.FC = () => {
   const [clientName, setClientName] = useState<string>("");
@@ -54,7 +57,7 @@ const Contact: React.FC = () => {
       setErrMessage(true);
     }
     if (clientName && email && EmailValidation(email) && messages) {
-      axios.post("https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f", {
+      axios.post("https://getform.io/f/5fc7e313-e290-4b98-a32c-4d48fe987a7b", {
         name: clientName,
         email: email,
         message: messages,
@@ -70,35 +73,28 @@ const Contact: React.FC = () => {
   return (
     <div className="w-full">
       <Title title="Get" subTitle="in Touch" />
-      <div className="p-6 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-10 lgl:gap-20">
-        <div className="w-full lgl:w-1/2">
-          <p className="flex gap-6 justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Address:
+      <div className="p-6 w-full flex flex-col  justify-between gap-4 md:gap-10 lgl:gap-20">
+        <div className="w-full lgl:w-2/2">
+          <p className="flex gap-6  w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
+            <span className="bg-designColor  text-lg  font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
+            <ImLocation2 />
             </span>
-            Muscat, Oman
+            Maghagha - Minia - Egypt
           </p>
-          <p className="flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Phone:
+          <p className="flex gap-6  w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
+            <span className="bg-designColor   text-lg  font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
+            <BsFillTelephoneFill />
             </span>
-            +968 97859628
+            +201029404662
           </p>
-        </div>
-        <div className="w-full lgl:w-1/2">
-          <p className="flex justify-between lgl:gap-6 w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Email:
+          <p className="flex  lgl:gap-6 w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
+            <span className="bg-designColor  text-lg  font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
+            <MdAlternateEmail />
             </span>
-            noor.jsdivs@gmail.com
-          </p>
-          <p className="flex justify-between w-full text-lg text-[#ccc] py-4 border-b-[1px] border-b-zinc-800">
-            <span className="bg-designColor text-gray-700 text-sm font-titleFont font-medium px-2 rounded-md flex items-center justify-center">
-              Freelance:
-            </span>
-            Abailable
+            93amr.kakashi@gmail.com
           </p>
         </div>
+
       </div>
       <div className="w-full mt-10">
         <Title title="Send" subTitle="Messages" />
@@ -110,7 +106,7 @@ const Contact: React.FC = () => {
           <form
           onSubmit={handleSend}
             id="form"
-            action="https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f"
+            action="https://getform.io/f/5fc7e313-e290-4b98-a32c-4d48fe987a7b"
             method="POST"
             className="p-6 flex flex-col gap-6"
           >
